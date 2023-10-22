@@ -2,7 +2,7 @@ from django.db import transaction
 from django.core.management.base import BaseCommand
 from BaseApi.AppEnum import UserRoleEnum
 from Account.models import Users
-from Permission.models import User_permissions, Roles
+from Permission.models import Roles
 from django.contrib.auth.models import Permission
 
 class Seeder:
