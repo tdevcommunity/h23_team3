@@ -64,6 +64,7 @@ class Users(AbstractBaseUser):
     REQUIRED_FIELDS = ['username']
 
     def is_mentor(self):
+        # Vérifie si l'utilisateur est un mentor (au moins une demande en tant que mentor)
         return self.mentor.exists()
 
     def is_mentore(self):
@@ -104,14 +105,3 @@ class Members(models.Model):
     status = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-
-    def accept_request(self):
-        if not self.status:
-            self.status = True
-            self.save()
-            # Envoyer un e-mail à l'utilisateur mentore
-            subject = "Demande de mentorat acceptée"
-            message = "Votre demande de mentorat a été acceptée. Vous pouvez maintenant commencer le mentorat."
-            from_email = "entreprise_email@example.com"
-            recipient_list = [self.mentore.email]
-            send_mail(subject, message, from_email, recipient_list, fail_silently=False)
