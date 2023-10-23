@@ -63,6 +63,9 @@ class Users(AbstractBaseUser):
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username']
 
+    class Meta:
+        verbose_name = 'Utilisateur'
+
     def is_mentor(self):
         # Vérifie si l'utilisateur est un mentor (au moins une demande en tant que mentor)
         return self.mentor.exists()
@@ -105,3 +108,6 @@ class Members(models.Model):
     status = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = 'Membre'

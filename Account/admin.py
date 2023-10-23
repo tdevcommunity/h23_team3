@@ -1,5 +1,4 @@
-# admin.py
-
+from django.utils import timezone
 from django.contrib import admin
 from django.core.mail import send_mail
 from .models import Members, Users
@@ -27,23 +26,42 @@ class MembersAdmin(admin.ModelAdmin):
 
     reject_requests.short_description = "Rejeter les demandes de mentorat sélectionnées"
 
-
 admin.site.register(Members, MembersAdmin)
 
 
 class UsersAdmin(admin.ModelAdmin):
-    list_display = ('id', 'first_name', 'last_name', 'email', 'is_staff')
-    search_fields = ('first_name', 'last_name', 'email')
+    list_display = ('get_user_count', 'get_user_count_by_gender', 'display_all_users', 'duration_since_creation', 'email',)
+    list_display_links = ('email',)  # Lien direct vers la page de modification
+    search_fields = ("first_name", "email")
 
-    def mentors_count(self, obj):
-        return Users.objects.filter(is_staff=True).count()
+    actions = ['edit_selected', 'delete_selected']
 
-    mentors_count.short_description = "Nombre de Mentors"
+    def get_user_count(self, obj):
+        # Comptez le nombre total d'utilisateurs
+        total_users = Users.objects.count()
+        return f'Total Users: {total_users}'
 
-    def mentores_count(self, obj):
-        return Users.objects.filter(is_staff=False).count()
+    def get_user_count_by_gender(self, obj):
+        # Comptez le nombre d'utilisateurs par sexe
+        male_count = Users.objects.filter(sexe='Male').count()
+        female_count = Users.objects.filter(sexe='Female').count()
+        return f'Male: ({male_count})  <--->  Female: ({female_count})'
 
-    mentores_count.short_description = "Nombre de Mentores"
+    def display_all_users(self, obj):
+        # Récupérez la liste complète des utilisateurs
+        all_users = Users.objects.all()
+        user_list = [f"{user.email}" for user in all_users]
+        return ', '.join(user_list)
+
+    def duration_since_creation(self, obj):
+        now = timezone.now()
+        duration = now - obj.created_at
+        return duration.days
+
+    duration_since_creation.short_description = 'Duration Since Creation'
+    display_all_users.short_description = 'All Users'
+    get_user_count.short_description = 'Total Users'
+    get_user_count_by_gender.short_description = 'Users by Gender'
 
 
 admin.site.register(Users, UsersAdmin)
