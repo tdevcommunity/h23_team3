@@ -20,7 +20,8 @@ class Seeder:
                     'first_name': 'Super',
                     'last_name': 'Admin',
                     'phone': '00000001',
-                    'role': superUserRole
+                    'role': superUserRole,
+                    'status': True,
                 }
             )
 

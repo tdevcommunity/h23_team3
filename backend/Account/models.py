@@ -55,6 +55,7 @@ class Users(AbstractBaseUser):
     sexe = models.CharField(max_length=255, choices=[(sexe.value, sexe.name) for sexe in GenderEnum], null=True)
     role = models.ForeignKey('Permission.Roles', on_delete=models.CASCADE, related_name='users_role')
     profession = models.ForeignKey('Account.Professions', on_delete=models.CASCADE, null=True)
+    stacks = models.ManyToManyField('Account.UserStacks', related_name='users_stacks')
     is_staff = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
@@ -80,7 +81,7 @@ class Users(AbstractBaseUser):
 
 class Stacks(models.Model):
     name = models.CharField(max_length=255)
-    description = models.TextField()
+    description = models.TextField(null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

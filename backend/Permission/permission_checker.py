@@ -27,7 +27,7 @@ class PermissionChecker:
             if user.status == False:
                 raise PermissionDenied('User is inactive')
             user_role = user.role 
-            permission = Permission_roles.objects.filter(role=user_role, permission__permission_key=permission_key)
+            permission = Permission_roles.objects.filter(role=user_role, permission__codename=permission_key)
             if permission.exists():
                 return True
         except Users.DoesNotExist:

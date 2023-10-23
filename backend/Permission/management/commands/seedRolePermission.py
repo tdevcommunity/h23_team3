@@ -2,9 +2,10 @@ from django.db import transaction
 from django.core.management.base import BaseCommand
 from django.contrib.auth.models import Permission
 from django.contrib.contenttypes.models import ContentType
-from Account.models import Users
+from Account.models import Users, Members
 from BaseApi.AppEnum import UserRoleEnum
 from Permission.models import Roles
+from Permission.Views.ManageUserPermission import affect_permission_to_role
 
 class Seeder:
     @classmethod
@@ -25,6 +26,16 @@ class Seeder:
                     'name': 'Active or Unactive user',
                     'type': Users,
                 },
+                {
+                    'codename': 'can_send_invitation',
+                    'name': 'Can send invitation',
+                    'type': Members,
+                },
+                {
+                    'codename': 'can_validate_invitation',
+                    'name': 'Can validate an invitation',
+                    'type': Members,
+                },
             ]
 
             for permission_data in permission_customizes:
@@ -35,6 +46,8 @@ class Seeder:
                     defaults={'name': permission_data['name']}
                 )
                 print(f"Permission '{permission.name}' created or updated.")
+
+            affect_permission_to_role()
 
 
 class Command(BaseCommand):
