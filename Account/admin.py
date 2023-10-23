@@ -4,6 +4,23 @@ from django.core.mail import send_mail
 from .models import Members, Users
 from django.utils.translation import ugettext_lazy as _
 
+# ******************************
+# class StatisticsAdmin(admin.ModelAdmin):
+#     list_display = ('total_users', 'male_count', 'female_count')  # Ajoutez d'autres statistiques si nécessaire
+#
+#     def total_users(self, obj):
+#         return Users.objects.count()
+#
+#     def male_count(self, obj):
+#         return Users.objects.filter(sexe='Male').count()
+#
+#     def female_count(self, obj):
+#         return Users.objects.filter(sexe='Female').count()
+#
+#
+# admin.site.register(Users, StatisticsAdmin)
+# *****************************
+
 
 class MembersAdmin(admin.ModelAdmin):
     list_display = ('mentor', 'mentore', 'status', 'created_at', 'updated_at')
@@ -49,7 +66,7 @@ class GenderFilter(admin.SimpleListFilter):
 
 
 class UsersAdmin(admin.ModelAdmin):
-    list_display = ('first_name', 'last_name','duration_since_creation', 'email',)
+    list_display = ('username','first_name', 'last_name','duration_since_creation', 'email',)
     list_display_links = ('email',)  # Lien direct vers la page de modification
     search_fields = ("first_name", "email")
     list_filter = (GenderFilter,)
