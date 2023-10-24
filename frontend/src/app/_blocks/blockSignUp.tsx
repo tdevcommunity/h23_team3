@@ -11,14 +11,14 @@ const BlockSignUp = () => {
                 </span>
 
                 <p className="py-8 text-lg">
-                    Parcourez la liste de nos mentors pour vous <br /> aidez a avancer sur vos projet
+                    Parcourez la liste de nos mentors pour vous <br /> aidez a avancer sur vos projets
                 </p>
                 <div className="flex gap-4">
                     <LinkButton href="#">
                         Inscription
                     </LinkButton>
                     <LinkButton href="#">
-                        Poseez une question
+                        Posez une question
                     </LinkButton>
                 </div>
             </SignUpCard>
@@ -29,7 +29,7 @@ const BlockSignUp = () => {
              
 
                 <p className="py-8 text-lg ">
-                Rejoignez-nous en tant que mentor et faites une différence dès aujourd'hu
+                Rejoignez-nous en tant que mentor et faites une différence dès aujourd'hui
                 </p>
                 <div>
                     <LinkButton href="#">
