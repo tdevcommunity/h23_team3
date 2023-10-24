@@ -5,7 +5,8 @@ import React, { Children, HTMLAttributeAnchorTarget, ReactNode } from "react";
 interface LinkButtonProps {
     href: any,
     target?: HTMLAttributeAnchorTarget | undefined,
-    children: ReactNode
+    children: ReactNode,
+    className?: String 
 }
 
 
@@ -29,8 +30,9 @@ const LinkButtonCircle: React.FC<LinkButtonProps> =({href , target , children })
     </Link> ;
 }
 
-const LinkButtonOutline: React.FC<LinkButtonProps> = ({href , target , children}) => {
-    return  <Link className="h-12 px-8 font-medium border border-input bg-background hover:bg-accent hover:text-accent-foreground inline-flex items-center rounded-full justify-center whitespace-nowrap  text-md  ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50" href={href} passHref target={target}>
+const LinkButtonOutline: React.FC<LinkButtonProps> = ({href , target , children,className}) => {
+    return  <Link className={cn("h-12 px-8 font-medium border border-input bg-background hover:bg-accent hover:text-accent-foreground inline-flex items-center rounded-full justify-center whitespace-nowrap  text-md  ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+    className )} href={href} passHref target={target}>
     {children}
 </Link>;
 }
