@@ -1,18 +1,22 @@
 import React from 'react';
-import FirstSection from '@/components/home-section1/firstSection';
-import Navbar from '../components/navbar/navbar';
+import Navbar from '@/components/ui/navbar';
+import BlockHeader from './_blocks/blockHeader';
+import BlockAbout from './_blocks/blockAbout';
+import BlockSignUp from './_blocks/blockSignUp';
+import BlockMentor from './_blocks/blockMentor';
+import BlockFooter from './_blocks/blockFooter';
 
-const Home = () => {
+export default function Home ()  {
   return (
     <>
-      <div className=''>
-        <Navbar />
-      </div>
-      <div className="flex justify-center mt-10"> 
-        <FirstSection />
-      </div>
+    <Navbar/>
+    <BlockHeader/>
+    <BlockAbout/>
+    <BlockSignUp/>
+    <BlockMentor/>
+    <BlockFooter/>
     </>
   );
 };
 
-export default Home;
+

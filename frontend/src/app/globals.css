@@ -69,8 +69,17 @@
 @layer base {
   * {
     @apply border-border;
+    margin:  0;
+    padding: 0 ;
   }
   body {
     @apply bg-background text-foreground;
+   
+  }
+}
+
+@layer components {
+  .bg-mentor {
+    @apply bg-xmentor ;
   }
 }
