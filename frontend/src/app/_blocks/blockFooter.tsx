@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const BlockFooter = () => {
   return <section className="w-full bg-gray-800 p-6   text-white">
-    <div className="w-10/12 mx-auto flex items-center justify-between my-2 pt-8 pb-8 border-b space-x-4">
+    <div className="w-10/12 mx-auto flex items-center justify-between my-2 pt-8 pb-8 border-b space-x-4 mt-8">
       <div className="flex gap-20">
         <Image
           src="/assets/logo/xmentor-w.svg"
