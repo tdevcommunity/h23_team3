@@ -1,0 +1,61 @@
+[
+    {
+        "id":1,
+        "name": "Guy Hawkins",
+        "profession": "Developpeur full-stack",
+        "stars": 4.8,
+        "image": "/assets/mentors/mentor1.jpg"
+    },
+    {
+        "id":2,
+        "name": "Sarah Johnson",
+        "profession": "Front-end Developer",
+        "stars": 4.6,
+        "image": "/assets/mentors/mentor1.jpg"
+    },
+    {
+        "id":3,
+        "name": "John Smith",
+        "profession": "Backend Developer",
+        "stars": 4.9,
+        "image": "/assets/mentors/mentor1.jpg"
+    },
+    {
+        "id":4,
+        "name": "Alice Wilson",
+        "profession": "Mobile App Developer",
+        "stars": 4.7,
+        "image": "/assets/mentors/mentor1.jpg"
+    },
+    {
+        "id":5,
+        "name": "Emily Brown",
+        "profession": "UX/UI Designer",
+        "stars": 4.8,
+        "image": "/assets/mentors/mentor1.jpg"
+    },
+    {
+        "id":6,
+        "name": "Michael Lee",
+        "profession": "Software Engineer",
+        "stars": 4.9,
+        "image": "/assets/mentors/mentor1.jpg"
+    },
+    {
+        "id":7,
+        "name": "Olivia Taylor",
+        "profession": "DevOps Engineer",
+        "stars": 4.7,
+        "image": "/assets/mentors/mentor1.jpg"
+
+    },
+    {
+        "id":8,
+        "name": "Daniel Martinez",
+        "profession": "Cybersecurity Analyst",
+        "stars": 4.6,
+        "image": "/assets/mentors/mentor1.jpg"
+    }
+]
+
+
