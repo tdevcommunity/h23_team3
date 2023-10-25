@@ -1,61 +1,98 @@
 [
     {
-        "id":1,
+        "id": 1,
         "name": "Guy Hawkins",
         "profession": "Developpeur full-stack",
         "stars": 4.8,
-        "image": "/assets/mentors/mentor1.jpg"
+        "image": "/assets/mentors/mentor4.jpg",
+        "sessions": 234,
+        "stack": ["HTML", "CSS", "JavaScript", "Node.js", "React", "Express", "MongoDB"],
+        "isBusy": false,
+        "languages": ["Francais", "Anglais"],
+        "sessionHour": 3
     },
     {
-        "id":2,
+        "id": 2,
         "name": "Sarah Johnson",
         "profession": "Front-end Developer",
-        "stars": 4.6,
-        "image": "/assets/mentors/mentor1.jpg"
+        "stars": 4,
+        "image": "/assets/mentors/mentor1.jpg",
+        "sessions": 150,
+        "stack": ["HTML", "CSS", "JavaScript", "React", "Vue.js"],
+        "isBusy": true,
+        "languages": ["Francais", "Anglais"],
+        "sessionHour": 7
     },
     {
-        "id":3,
+        "id": 3,
         "name": "John Smith",
         "profession": "Backend Developer",
         "stars": 4.9,
-        "image": "/assets/mentors/mentor1.jpg"
+        "image": "/assets/mentors/mentor7.jpg",
+        "sessions": 200,
+        "stack": ["Node.js", "Express", "MongoDB", "Python", "Django"],
+        "isBusy": false,
+        "languages": ["Francais", "Anglais", "Ewe"],
+        "sessionHour": 2
     },
     {
-        "id":4,
+        "id": 4,
         "name": "Alice Wilson",
         "profession": "Mobile App Developer",
         "stars": 4.7,
-        "image": "/assets/mentors/mentor1.jpg"
+        "image": "/assets/mentors/mentor3.jpg",
+        "sessions": 180,
+        "stack": ["React Native", "Swift", "Kotlin", "Firebase"],
+        "isBusy": false,
+        "languages": ["Francais", "Kotokoli"],
+        "sessionHour": 5
     },
     {
-        "id":5,
+        "id": 5,
         "name": "Emily Brown",
         "profession": "UX/UI Designer",
         "stars": 4.8,
-        "image": "/assets/mentors/mentor1.jpg"
+        "image": "/assets/mentors/mentor5.jpg",
+        "sessions": 120,
+        "stack": ["Adobe XD", "Sketch", "Figma", "InVision"],
+        "isBusy": true,
+        "languages": ["Anglais"],
+        "sessionHour": 1
     },
     {
-        "id":6,
+        "id": 6,
         "name": "Michael Lee",
         "profession": "Software Engineer",
         "stars": 4.9,
-        "image": "/assets/mentors/mentor1.jpg"
+        "image": "/assets/mentors/mentor6.jpg",
+        "sessions": 220,
+        "stack": ["Java", "C++", "Python", "Git", "Linux"],
+        "isBusy": false,
+        "languages": ["Francais", "Anglais", "Kotokoli"],
+        "sessionHour": 8
     },
     {
-        "id":7,
+        "id": 7,
         "name": "Olivia Taylor",
         "profession": "DevOps Engineer",
         "stars": 4.7,
-        "image": "/assets/mentors/mentor1.jpg"
-
+        "image": "/assets/mentors/mentor2.jpg",
+        "sessions": 100,
+        "stack": ["Docker", "Kubernetes", "Jenkins", "AWS", "Linux"],
+        "isBusy": false,
+        "languages": ["Francais", "Anglais", "Ewe"],
+        "sessionHour": 6
     },
     {
-        "id":8,
+        "id": 8,
         "name": "Daniel Martinez",
         "profession": "Cybersecurity Analyst",
         "stars": 4.6,
-        "image": "/assets/mentors/mentor1.jpg"
+        "image": "/assets/mentors/mentor8.jpg",
+        "sessions": 120,
+        "stack": ["Cybersecurity", "Penetration Testing", "Firewalls"],
+        "isBusy": true,
+        "languages": ["Francais", "Anglais"],
+        "sessionHour": 10
     }
 ]
-
-
