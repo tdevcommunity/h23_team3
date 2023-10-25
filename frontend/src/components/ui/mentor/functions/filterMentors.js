@@ -14,3 +14,15 @@ export const  filterBySessions =(mentors, sessionsThreshold, isLessThan)=> {
         return mentors.filter(mentor => mentor.sessions > sessionsThreshold);
     }
 }
+
+export const filterBySessionsHourRange = (mentors, minSessionsHour,  maxSessionsHour) =>{
+    return mentors.filter(mentor => mentor.sessionHour >= minSessionsHour && mentor.sessionHour <= maxSessionsHour)
+}
+
+export const  filterBySessionsHour =(mentors, sessionsThreshold, isLessThan)=> {
+    if (isLessThan) {
+        return mentors.filter(mentor => mentor.sessionHour < sessionsThreshold);
+    } else {
+        return mentors.filter(mentor => mentor.sessionHour > sessionsThreshold);
+    }
+}

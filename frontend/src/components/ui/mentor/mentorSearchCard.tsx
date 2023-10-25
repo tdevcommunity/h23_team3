@@ -11,7 +11,7 @@ const MentorSearchCard = ({ mentor }) => {
     };
 
     return (
-        <div className="w-11/12 shadow-md flex items-center justify-center rounded-lg mb-8 ml-5" style={{ height: '500px' }}>
+        <div className="w-11/12  max-h-72 shadow-md flex items-center justify-center rounded-lg mb-8 ml-5" style={{ height: '600px',  }}>
             <div className="flex w-2/3 h-full p-5  flex-col ">
                 <div className="flex mb-5">
                     <h1 className="text-purple mr-5">{mentor.stars}</h1>
