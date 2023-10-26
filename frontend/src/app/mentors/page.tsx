@@ -4,11 +4,7 @@ import Navbar from '@/components/ui/navbar';
 const Search = () => {
     return (
         <>
-
-
-                                 <FilterBar />
-   
-          
+                       <FilterBar />  
         </>
     )
 }

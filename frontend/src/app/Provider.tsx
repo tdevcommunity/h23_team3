@@ -5,4 +5,4 @@ export const Authprovider: React.FC<{ children: ReactNode }> = ({ children }) =>
     return <SessionProvider>
         {children}
     </SessionProvider>
-}
+}  

@@ -28,7 +28,7 @@ const BlockFooter = () => {
       </div>
     </div>
 
-    <div className="flex gap-20 w-10/12 mx-auto flex items-center justify-between    my-2  pt-6" >
+    <div className="flex gap-20 w-10/12 mx-auto  items-center justify-between    my-2  pt-6" >
       <ul className="flex gap-10  items-end">
         <span>@2023 ElementX</span>
         <Link href={"/termes"}>Termes</Link>

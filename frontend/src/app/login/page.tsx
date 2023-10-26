@@ -21,7 +21,7 @@ import { LinkButtonOutline } from "@/components/ui/linkButton"
 
 const FormSchema = z.object({
     email: z.string().min(2, {
-        message: "Idenitfiant requise",
+        message: "Identifiant requis",
     }),
     password: z.string().min(2, {
         message: "Mot de passe requis",
