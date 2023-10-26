@@ -150,14 +150,10 @@ STATIC_URL = 'static/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-# Configuration de l'envoi d'e-mails
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.ionos.fr'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'tdev@gmail.com'
-EMAIL_HOST_PASSWORD = 'tdev@2345'
-EMAIL_CLIENT = 'tdev@gmail.com'
-SERVER_EMAIL = 'smtp.ionos.fr'
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = 52
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = False
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
