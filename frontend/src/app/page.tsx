@@ -9,7 +9,7 @@ import BlockFooter from './_blocks/blockFooter';
 export default function Home ()  {
   return (
     <>
-    <Navbar/>
+  
     <BlockHeader/>
     <BlockAbout/>
     <BlockSignUp/>

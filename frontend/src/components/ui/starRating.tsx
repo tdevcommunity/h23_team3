@@ -12,14 +12,11 @@ const StarRating = ({ rating }) => {
   for (let i = 0; i < fullStars; i++) {
     stars.push(<StarIcon key={i} />);
   }
-  if (hasHalfStar) {
-    stars.push(<HalfStar key={fullStars} />);
-  }
-
+ 
   return (
-    <div style={{display:'flex'}}>
+    <div  className='flex'>
       {stars.map((star, index) => (
-        <span key={index}  style={{color:'purple'}} >{star}</span>
+        <span key={index} className='text-yellow-600'>{star}</span>
       ))}
     </div>
   );
