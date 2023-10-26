@@ -6,6 +6,7 @@ from Account.models import Users, Members
 from BaseApi.AppEnum import UserRoleEnum
 from Permission.models import Roles
 from Permission.Views.ManageUserPermission import affect_permission_to_role
+from Resource.models import Ressources
 
 class Seeder:
     @classmethod
@@ -15,6 +16,7 @@ class Seeder:
                 user_role, created = Roles.objects.get_or_create(name=role.value, defaults={'description': role.value})
                 if created:
                     user_role.save()
+            affect_permission_to_role()
 
     @classmethod
     def seedPermissions(cls):
@@ -36,6 +38,16 @@ class Seeder:
                     'name': 'Can validate an invitation',
                     'type': Members,
                 },
+                {
+                    'codename': 'can_create_session',
+                    'name': 'Can create session',
+                    'type': Ressources,
+                },
+                {
+                    'codename': 'can_create_mini_blog',
+                    'name': 'Can create mini blog',
+                    'type': Ressources,
+                },
             ]
 
             for permission_data in permission_customizes:
@@ -46,8 +58,6 @@ class Seeder:
                     defaults={'name': permission_data['name']}
                 )
                 print(f"Permission '{permission.name}' created or updated.")
-
-            affect_permission_to_role()
 
 
 class Command(BaseCommand):

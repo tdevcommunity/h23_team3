@@ -14,6 +14,7 @@ class Ressources(models.Model):
     author = models.ForeignKey('Account.Users', on_delete=models.CASCADE)
     can_chat = models.BooleanField(default=False)
     status = models.CharField(max_length=255, choices=[(ResourceStatus.value, ResourceStatus.name) for ResourceStatus in ResourcesStatusEnum])
+    stacks = models.ManyToManyField('Account.Stacks', related_name='resource_stacks_associate')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
