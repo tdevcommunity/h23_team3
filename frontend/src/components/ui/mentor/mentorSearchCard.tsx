@@ -1,5 +1,6 @@
 import StarRating from '@/components/ui/starRating';
 import LanguageIcon from '@/components/ui/languageIcon';
+import { Key } from 'react';
 
 const MentorSearchCard = ({ mentor }) => {
     const isBusyStyle = {
@@ -11,7 +12,7 @@ const MentorSearchCard = ({ mentor }) => {
     };
 
     return (
-        <div className="w-11/12  max-h-72 shadow-md flex items-center justify-center rounded-lg mb-8 ml-5" style={{ height: '600px',  }}>
+        <div className="w-full  max-h-72 shadow-md flex items-center justify-center rounded-lg mb-8 ml-5">
             <div className="flex w-2/3 h-full p-5  flex-col ">
                 <div className="flex mb-5">
                     <h1 className="text-purple mr-5">{mentor.stars}</h1>
@@ -21,7 +22,7 @@ const MentorSearchCard = ({ mentor }) => {
                     <LanguageIcon />
                     <div className="flex ml-5">
                         {
-                            mentor?.languages?.map((language, index) => (
+                            mentor?.languages?.map((language: String, index: Key) => (
                                 <p key={index} style={{
                                     padding: '5px',
                                     color: 'black',
@@ -48,20 +49,20 @@ const MentorSearchCard = ({ mentor }) => {
 
                 </div>
             </div>
-            <div className="flex w-1/3 h-full  items-center">
+            <div className="  items-center">
                 <div className="flex flex-col items-center p-8">
                     <div className="h-24 w-24 rounded-full bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${mentor.image})` }}></div>
                     <p>{mentor.name}</p>
                 </div>
                 <div>
                     {mentor.isBusy ? (
-                        <p className="p-5" style={isBusyStyle}>
+                        <span className="p-5" style={isBusyStyle}>
                             Indisponible
-                        </p>
+                        </span>
                     ) : (
-                        <h1 className="p-5" style={isBusyStyle}>
+                        <span className="p-5" style={isBusyStyle}>
                             Disponible
-                        </h1>
+                        </span>
                     )}
                 </div>
             </div>
