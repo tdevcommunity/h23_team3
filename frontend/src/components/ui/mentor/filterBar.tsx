@@ -192,7 +192,7 @@ const FilterBar = () => {
                                                         <span className='h-2 w-2 inline-block  rounded-full  bg-green-600'>
                                                         </span>
                                                         <span>
-                                                            Dispobile
+                                                            Disponible
                                                         </span>
                                                     </span>
                                                 </div>
