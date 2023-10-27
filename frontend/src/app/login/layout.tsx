@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: 'se connecter',
 }
 
-export default function RootLayout({
+export default function LoginRoot({
   children,
 }: {
   children: React.ReactNode
@@ -20,7 +20,7 @@ export default function RootLayout({
         
       <body>
      
-          {children}
+          {children}  
    
       </body>
     </html>

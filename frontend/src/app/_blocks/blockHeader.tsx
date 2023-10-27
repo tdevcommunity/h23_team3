@@ -1,4 +1,5 @@
 import { LinkButton, LinkButtonOutline, LinkButtonSecondary } from "@/components/ui/linkButton";
+import Slider from "@/components/ui/slider";
 import React from "react";
 
  const BlockHeader: React.FC = () => {
@@ -29,32 +30,9 @@ import React from "react";
                 </div>
 
             </div>
-           <div className="flex  gap-10 mt-10  ">
-            <div className="h[26rem] w-[15rem] bg-red-500">
-                card 
-            </div>
-            <div className="h[26rem] w-[15rem] bg-red-500">
-                card 
-            </div>
-            <div className="h[26rem] w-[15rem] bg-red-500">
-                card 
-            </div>
-            <div className="h[26rem] w-[15rem] bg-red-500">
-                card 
-            </div>
-            <div className="h[26rem] w-[15rem] bg-red-500">
-                card 
-            </div>
-            <div className="h[26rem] w-[15rem] bg-red-500">
-                card 
-            </div>
-            <div className="h[26rem] w-[15rem] bg-red-500">
-                card 
-            </div>
-            <div className="h[26rem] w-[15rem] bg-red-500">
-                card 
-            </div>
-           </div>
+          <div className="overflow-hidden">
+          <Slider />
+          </div>
         </header>
     </>
 }

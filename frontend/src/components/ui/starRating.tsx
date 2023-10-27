@@ -1,6 +1,6 @@
 import React from 'react';
-import StarIcon from '@/components/ui/starIcon';
-import HalfStar from '@/components/ui/halfStar';
+import {StarIcon} from '@/components/icon/icons';
+
 
 const StarRating = ({ rating }) => {
   // Calculate the number of full stars and the remainder for the half star.
