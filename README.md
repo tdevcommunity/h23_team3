@@ -1,6 +1,12 @@
 # XMentors 
-Le pont entre les développeurs expérimentés et les novices, offrant un espace pour l'échange de connaissances, le coaching et le mentorat ciblé.
+Une application web qui est un pont entre les développeurs expérimentés et les novices, offrant un espace pour l'échange de connaissances, le coaching et le mentorat ciblé.
 
+## Tech Stack
+
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Shadcn UI](http://daisyui.com)
+- [Django](https://www.djangoproject.com/)
 ## Getting Started
 
 run the development  server :
