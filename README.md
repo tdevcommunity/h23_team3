@@ -1,4 +1,6 @@
 # h23_team3
+![image](https://github.com/tdevcommunity/h23_team3/assets/63166764/5b5d8edf-8c08-4ac8-8bc0-b3f42c668be2)
+ #Theme
  Repertoire pour le hacktoberfest Lome de l'equipe 3
 
 # Projet 1 
