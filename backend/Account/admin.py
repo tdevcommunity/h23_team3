@@ -1,8 +1,9 @@
 from django.utils import timezone
 from django.contrib import admin
 from django.core.mail import send_mail
-from .models import Members, Users
-from django.utils.translation import ugettext_lazy as _
+from Account.models import Users, Members
+from Resource.models import Type
+from django.utils.translation import gettext_lazy as _
 
 # ******************************
 # class StatisticsAdmin(admin.ModelAdmin):
@@ -20,7 +21,6 @@ from django.utils.translation import ugettext_lazy as _
 #
 # admin.site.register(Users, StatisticsAdmin)
 # *****************************
-
 
 class MembersAdmin(admin.ModelAdmin):
     list_display = ('mentor', 'mentore', 'status', 'created_at', 'updated_at')
