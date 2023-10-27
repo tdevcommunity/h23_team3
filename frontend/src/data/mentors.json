@@ -2,26 +2,44 @@
     {
         "id": 1,
         "name": "Guy Hawkins",
-        "profession": "Developpeur full-stack",
+        "profession": "Full-Stack Developer",
         "stars": 4.8,
         "image": "/assets/mentors/mentor4.jpg",
         "sessions": 234,
         "stack": ["HTML", "CSS", "JavaScript", "Node.js", "React", "Express", "MongoDB"],
         "isBusy": false,
-        "languages": ["Francais", "Anglais"],
-        "sessionHour": 3
+        "languages": ["French", "English"],
+        "sessionHour": 3,
+        "description": "Hi there! I'm Guy Hawkins, a passionate Full-Stack Developer. With 234 mentorship sessions, I'm here to guide you through the exciting world of web development. Whether it's HTML, CSS, JavaScript, or any of the other technologies in my stack, I've got you covered. Let's build something amazing together!",
+        "expertise": [
+            { "technology": "HTML", "experienceYears": 5, "sessionNumbers": 100 },
+            { "technology": "CSS", "experienceYears": 6, "sessionNumbers": 120 },
+            { "technology": "JavaScript", "experienceYears": 7, "sessionNumbers": 150 },
+            { "technology": "Node.js", "experienceYears": 4, "sessionNumbers": 80 },
+            { "technology": "React", "experienceYears": 4, "sessionNumbers": 70 },
+            { "technology": "Express", "experienceYears": 3, "sessionNumbers": 60 },
+            { "technology": "MongoDB", "experienceYears": 3, "sessionNumbers": 50 }
+        ]
     },
     {
         "id": 2,
         "name": "Sarah Johnson",
-        "profession": "Front-end Developer",
+        "profession": "Front-End Developer",
         "stars": 4,
         "image": "/assets/mentors/mentor1.jpg",
         "sessions": 150,
         "stack": ["HTML", "CSS", "JavaScript", "React", "Vue.js"],
         "isBusy": true,
-        "languages": ["Francais", "Anglais"],
-        "sessionHour": 7
+        "languages": ["French", "English"],
+        "sessionHour": 7,
+        "description": "Hello, I'm Sarah Johnson, a Front-End Developer with a flair for creativity. I've conducted 150 mentorship sessions, and I'm ready to help you master the art of building beautiful, responsive web interfaces using HTML, CSS, JavaScript, React, and Vue.js. Let's make the web more stunning together!",
+        "expertise": [
+            { "technology": "HTML", "experienceYears": 4, "sessionNumbers": 50 },
+            { "technology": "CSS", "experienceYears": 5, "sessionNumbers": 60 },
+            { "technology": "JavaScript", "experienceYears": 5, "sessionNumbers": 70 },
+            { "technology": "React", "experienceYears": 3, "sessionNumbers": 30 },
+            { "technology": "Vue.js", "experienceYears": 2, "sessionNumbers": 20 }
+        ]
     },
     {
         "id": 3,
@@ -32,8 +50,16 @@
         "sessions": 200,
         "stack": ["Node.js", "Express", "MongoDB", "Python", "Django"],
         "isBusy": false,
-        "languages": ["Francais", "Anglais", "Ewe"],
-        "sessionHour": 2
+        "languages": ["French", "English", "Ewe"],
+        "sessionHour": 2,
+        "description": "Hey, I'm John Smith, a Backend Developer with a love for server-side technologies. I've shared my knowledge in 200 mentorship sessions and can't wait to help you dive into Node.js, Express, MongoDB, Python, Django, and more. Let's power the digital world together!",
+        "expertise": [
+            { "technology": "Node.js", "experienceYears": 4, "sessionNumbers": 80 },
+            { "technology": "Express", "experienceYears": 3, "sessionNumbers": 60 },
+            { "technology": "MongoDB", "experienceYears": 3, "sessionNumbers": 50 },
+            { "technology": "Python", "experienceYears": 5, "sessionNumbers": 70 },
+            { "technology": "Django", "experienceYears": 4, "sessionNumbers": 60 }
+        ]
     },
     {
         "id": 4,
@@ -44,8 +70,15 @@
         "sessions": 180,
         "stack": ["React Native", "Swift", "Kotlin", "Firebase"],
         "isBusy": false,
-        "languages": ["Francais", "Kotokoli"],
-        "sessionHour": 5
+        "languages": ["French", "Kotokoli"],
+        "sessionHour": 5,
+        "description": "Greetings! I'm Alice Wilson, a Mobile App Developer with a passion for crafting mobile experiences. In 180 mentorship sessions, I've helped others explore the world of React Native, Swift, Kotlin, and Firebase. Let's create the next big app together!",
+        "expertise": [
+            { "technology": "React Native", "experienceYears": 4, "sessionNumbers": 60 },
+            { "technology": "Swift", "experienceYears": 3, "sessionNumbers": 50 },
+            { "technology": "Kotlin", "experienceYears": 2, "sessionNumbers": 40 },
+            { "technology": "Firebase", "experienceYears": 4, "sessionNumbers": 30 }
+        ]
     },
     {
         "id": 5,
@@ -56,8 +89,15 @@
         "sessions": 120,
         "stack": ["Adobe XD", "Sketch", "Figma", "InVision"],
         "isBusy": true,
-        "languages": ["Anglais"],
-        "sessionHour": 1
+        "languages": ["English"],
+        "sessionHour": 1,
+        "description": "Hi, I'm Emily Brown, a UX/UI Designer dedicated to enhancing user experiences. In 120 mentorship sessions, I've delved into Adobe XD, Sketch, Figma, and InVision. Let's design engaging and user-friendly interfaces together!",
+        "expertise": [
+            { "technology": "Adobe XD", "experienceYears": 4, "sessionNumbers": 40 },
+            { "technology": "Sketch", "experienceYears": 3, "sessionNumbers": 30 },
+            { "technology": "Figma", "experienceYears": 3, "sessionNumbers": 30 },
+            { "technology": "InVision", "experienceYears": 2, "sessionNumbers": 20 }
+        ]
     },
     {
         "id": 6,
@@ -66,10 +106,18 @@
         "stars": 4.9,
         "image": "/assets/mentors/mentor6.jpg",
         "sessions": 220,
-        "stack": ["Java", "C++", "Python", "Git", "Linux"],
+        "stack": ["Java",    "C++", "Python", "Git", "Linux"],
         "isBusy": false,
-        "languages": ["Francais", "Anglais", "Kotokoli"],
-        "sessionHour": 8
+        "languages": ["French", "English", "Kotokoli"],
+        "sessionHour": 8,
+        "description": "Hey, I'm Michael Lee, a Software Engineer passionate about coding. In 220 mentorship sessions, I've dived into Java, C++, Python, Git, Linux, and more. Let's create efficient and robust software together!",
+        "expertise": [
+            { "technology": "Java", "experienceYears": 6, "sessionNumbers": 80 },
+            { "technology": "C++", "experienceYears": 5, "sessionNumbers": 70 },
+            { "technology": "Python", "experienceYears": 4, "sessionNumbers": 60 },
+            { "technology": "Git", "experienceYears": 4, "sessionNumbers": 60 },
+            { "technology": "Linux", "experienceYears": 3, "sessionNumbers": 50 }
+        ]
     },
     {
         "id": 7,
@@ -80,8 +128,16 @@
         "sessions": 100,
         "stack": ["Docker", "Kubernetes", "Jenkins", "AWS", "Linux"],
         "isBusy": false,
-        "languages": ["Francais", "Anglais", "Ewe"],
-        "sessionHour": 6
+        "languages": ["French", "English", "Ewe"],
+        "sessionHour": 6,
+        "description": "Hello, I'm Olivia Taylor, a DevOps Engineer specializing in continuous integration and delivery. In 100 mentorship sessions, I've explored Docker, Kubernetes, Jenkins, AWS, and Linux. Let's automate and streamline software development together!",
+        "expertise": [
+            { "technology": "Docker", "experienceYears": 4, "sessionNumbers": 40 },
+            { "technology": "Kubernetes", "experienceYears": 3, "sessionNumbers": 30 },
+            { "technology": "Jenkins", "experienceYears": 3, "sessionNumbers": 30 },
+            { "technology": "AWS", "experienceYears": 4, "sessionNumbers": 40 },
+            { "technology": "Linux", "experienceYears": 3, "sessionNumbers": 30 }
+        ]
     },
     {
         "id": 8,
@@ -92,7 +148,14 @@
         "sessions": 120,
         "stack": ["Cybersecurity", "Penetration Testing", "Firewalls"],
         "isBusy": true,
-        "languages": ["Francais", "Anglais"],
-        "sessionHour": 10
+        "languages": ["French", "English"],
+        "sessionHour": 10,
+        "description": "Greetings! I'm Daniel Martinez, a Cybersecurity Analyst committed to safeguarding digital assets. In 120 mentorship sessions, I've explored cybersecurity, penetration testing, and firewalls. Let's protect the digital world together!",
+        "expertise": [
+            { "technology": "Cybersecurity", "experienceYears": 5, "sessionNumbers": 60 },
+            { "technology": "Penetration Testing", "experienceYears": 4, "sessionNumbers": 50 },
+            { "technology": "Firewalls", "experienceYears": 3, "sessionNumbers": 40 }
+        ]
     }
 ]
+

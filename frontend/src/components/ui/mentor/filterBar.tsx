@@ -159,7 +159,7 @@ const FilterBar = () => {
                             ) : (
                                 <div>
                                     {mentors?.map((mentor, index) => (
-                                        <div key="index" className='flex group bg-white hover:bg-blue-50 rounded-md duration-300 hover:cursor-pointer hover:border-xmentor hover:hover-2  border mb-6 px-5  py-6  '>
+                                        <div key={index} className='flex group bg-white hover:bg-blue-50 rounded-md duration-300 hover:cursor-pointer hover:border-xmentor hover:hover-2  border mb-6 px-5  py-6  '>
                                             <div className='w-5/6 '>
                                                 <div className='flex gap-4   items-end pb-5  '>
                                                     <span className='text-2xl font-semibold group-hover:underline duraiton-300 group-hover:text-xmentor'> {mentor.name} </span>
@@ -169,45 +169,54 @@ const FilterBar = () => {
                                                     <span className='py-1 px-4 rounded-full  bg-xmentor/10 text-sm text-black'>1000 reviews </span>
                                                 </div>
                                                 <div className=' text-xl font-medium'>
-                                                    Full Stack PHP / NODE/REACT/ WORDPRESS/SHOPIFY web developer
+                                                    {mentor.profession}
                                                 </div>
                                                 <div className='flex gap-5 py-2 text-sm '>
-                                                    <span className='flex gap-1'>   <LanguageIcon /> Français,Anglais</span>
-                                                    <span> 10 Sessions</span>
+                                                    <span className='flex gap-1 p-3'>   <LanguageIcon />
+                                                        {
+                                                            mentor?.languages?.map((language, index) => (
+                                                                <p key={index} style={{
+                                                                    padding: '5px',
+                                                                    color: 'black',
+                                                                    fontSize: '12px'
+                                                                }} >{language}</p>
+                                                            ))
+                                                        }</span>
+                                                    <span>Sessions</span>
                                                 </div>
                                                 <p className='text-sm '>
-                                                    I am an experienced full stack developer 15 years in the field with consistent knowledge in developing web portals with expertise in all opensource of PHP like Wordpress , Opencart, Oscommerce...
+                                                    {mentor.description}
                                                 </p>
-                                                <div className='flex gap-3 pt-4 '>
+                                                <div className="flex flex-wrap">
+
                                                     {
                                                         mentor?.stack?.map((skill, index) => (
-                                                            <p key={index} className="px-2 text-sm   py-1 bg-gray-200 ">{skill}</p>
+                                                            <p key={index} style={{
+                                                                padding: '5px',
+                                                                color: 'black',
+                                                                fontSize: '12px',
+                                                                border: 'solid 1px purple',
+                                                                marginLeft: '3px',
+                                                                borderRadius: '2px'
+                                                            }} >{skill}</p>
                                                         ))
                                                     }
-
 
                                                 </div>
                                             </div>
                                             <div className='w-1/6 flex  justify-center items-center gap-5 flex-col'>
                                                 <Image className='w-24 object-cover rounded-full h-24  ' width={100} height={100} alt="" src={mentor.image} />
                                                 <div>
-                                                    {mentor.isBusy ? (
-                                                        <span className='py-1 px-4 bg-green-100 rounded-full text-sm  inline-flex items-center gap-2 '>
-                                                            <span className='h-2 w-2 inline-block  rounded-full  bg-green-600'>
-                                                            </span>
-                                                            <span>
-                                                                Disponible
-                                                            </span>
+                                                    <span className={`py-1 px-4 rounded-full text-sm inline-flex items-center gap-2 ${mentor.isBusy ? 'bg-red-100' : 'bg-green-100'}`}>
+                                                        <span className={`h-2 w-2 inline-block rounded-full ${mentor.isBusy ? 'bg-red-700' : 'bg-green-700'}`}></span>
+                                                        <span>
+                                                            {mentor.isBusy ? (
+                                                                <p>Indisponible</p>
+                                                            ) : (
+                                                                <p>Disponible</p>
+                                                            )}
                                                         </span>
-                                                    ) : (
-                                                        <span className='py-1 px-4 bg-red-100 rounded-full text-sm  inline-flex items-center gap-2 '>
-                                                            <span className='h-2 w-2 inline-block  rounded-full  bg-red-600'>
-                                                            </span>
-                                                            <span>
-                                                                Occupée
-                                                            </span>
-                                                        </span>
-                                                    )}
+                                                    </span>
 
                                                 </div>
                                             </div>
