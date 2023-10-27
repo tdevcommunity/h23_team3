@@ -8,7 +8,7 @@ import { Input } from '../input';
 
 import { useState } from 'react';
 import StarRating from '../starRating';
-import LanguageIcon from '../languageIcon';
+import { LanguageIcon } from '@/components/icon/icons';
 import { SearchIcon } from '@/components/icon/icons';
 
 const FilterBar = () => {
@@ -19,7 +19,7 @@ const FilterBar = () => {
                 <div className='w-full h-40 bg-xmentor/10 flex-col  justify-center  flex items-center '>
                     <h1 className='mx-auto text-3xl font-semibold '> Rechercher le mentor qui vous convient</h1>
                     <div className='text-sm flex gap-5 mt-5 items-center '>
-                        suggestion:
+                        suggestions:
                         <div className='flex gap-2'>
                             <span className='px-2 text-sm rounded  py-1 bg-xmentor text-white '>HTML</span>
                             <span className='px-2 text-sm  rounded py-1 bg-xmentor text-white '>Javascript </span>
@@ -33,12 +33,12 @@ const FilterBar = () => {
                     </div>
                 </div>
                 <div className=" w-8/12  mx-auto grid grid-cols-4   gap-6" >
-                    <div className="w-full flex flex-col bg-white border p-8 rounded-md h-fit sticky">
-                        <h1 className=" font-medium">Filtre</h1>
-                        <div className="mt-8 mb-4">
-                            <h2 className="text-lg">Session (par semaine)</h2>
+                    <div className="w-full flex flex-col bg-white border py-4 px-6 rounded-md h-fit sticky">
+                        <h1 className="mb-6 ">Filtre</h1>
+                        <div className="">
+                            <h2 className=" font-semibold mb-3">Session (par semaine)</h2>
                             <div>
-                                <label className="flex items-center">
+                                <label className="flex items-center mb-2">
                                     <input type='radio' name='sessions' value='2' className="mr-2" onChange={() => {
                                         const tempMentors = filterBySessionsHour(mentorsData, 2, true)
                                         setMentors(tempMentors)
@@ -47,7 +47,7 @@ const FilterBar = () => {
                                 </label>
                             </div>
                             <div>
-                                <label className="flex items-center">
+                                <label className="flex items-center mb-2">
                                     <input type='radio' name='sessions' value='4' className="mr-2" onChange={() => {
                                         const tempMentors = filterBySessionsHourRange(mentorsData, 2, 6)
                                         setMentors(tempMentors)
@@ -56,7 +56,7 @@ const FilterBar = () => {
                                 </label>
                             </div>
                             <div>
-                                <label className="flex items-center">
+                                <label className="flex items-center mb-2">
                                     <input type='radio' name='sessions' value='6' className="mr-2" onChange={() => {
                                         const tempMentors = filterBySessions(mentorsData, 6, false)
                                         setMentors(tempMentors)
@@ -65,16 +65,16 @@ const FilterBar = () => {
                                 </label>
                             </div>
                             <div>
-                                <label className="flex items-center">
+                                <label className="flex items-center mb-2">
                                     <input type='radio' name='sessions' value='0' className="mr-2" />
                                     Free
                                 </label>
                             </div>
                         </div>
                         <div className="mt-8 mb-4">
-                            <h2 className="text-lg">Nombre de sessions</h2>
+                            <h2 className="font-semibold mb-3 ">Nombre de sessions</h2>
                             <div>
-                                <label className="flex items-center">
+                                <label className="flex items-center mb-2">
                                     <input type='radio' name='nombre' value='20' className="mr-2" onChange={() => {
                                         const tempMentors = filterBySessions(mentorsData, 20, true)
                                         setMentors(tempMentors)
@@ -83,7 +83,7 @@ const FilterBar = () => {
                                 </label>
                             </div>
                             <div>
-                                <label className="flex items-center">
+                                <label className="flex items-center mb-2">
                                     <input type='radio' name='nombre' value='50' className="mr-2" onChange={() => {
                                         const tempMentors = filterBySessionsRange(mentorsData, 20, 50)
                                         setMentors(tempMentors)
@@ -92,7 +92,7 @@ const FilterBar = () => {
                                 </label>
                             </div>
                             <div>
-                                <label className="flex items-center">
+                                <label className="flex items-center mb-2">
                                     <input type='radio' name='nombre' value='150' className="mr-2" onChange={() => {
                                         const tempMentors = filterBySessionsRange(mentorsData, 50, 150)
                                         setMentors(tempMentors)
@@ -110,10 +110,10 @@ const FilterBar = () => {
                                 </label>
                             </div>
                         </div>
-                        <div className="mt-8 mb-4">
-                            <h2 className="text-lg">Langue</h2>
+                        <div className="">
+                            <h2 className="font-semibold mb-3 ">Langue</h2>
                             <div>
-                                <label className="flex items-center">
+                                <label className="flex items-center mb-2 ">
                                     <input type='radio' name='langue' value='Francais' className="mr-2" onChange={() => {
                                         const tempMentors = filterByLanguage(mentorsData, 'Francais')
                                         setMentors(tempMentors)
@@ -122,7 +122,7 @@ const FilterBar = () => {
                                 </label>
                             </div>
                             <div>
-                                <label className="flex items-center">
+                                <label className="flex items-center mb-2">
                                     <input type='radio' name='langue' value='Anglais' className="mr-2" onChange={() => {
                                         const tempMentor = filterByLanguage(mentorsData, 'Anglais')
                                         setMentors(tempMentor)
@@ -131,7 +131,7 @@ const FilterBar = () => {
                                 </label>
                             </div>
                             <div>
-                                <label className="flex items-center">
+                                <label className="flex items-center mb-2">
                                     <input type='radio' name='langue' value='Ewe' className="mr-2" onChange={() => {
                                         const tempMentor = filterByLanguage(mentorsData, 'Ewe')
                                         setMentors(tempMentor)
@@ -140,7 +140,7 @@ const FilterBar = () => {
                                 </label>
                             </div>
                             <div>
-                                <label className="flex items-center">
+                                <label className="flex items-center mb-2">
                                     <input type='radio' name='langue' value='Kotokoli' className="mr-2" onChange={() => {
                                         const tempMentor = filterByLanguage(mentorsData, 'Kotokoli')
                                         setMentors(tempMentor)
@@ -166,7 +166,7 @@ const FilterBar = () => {
                                                     <span className='flex '>
                                                         <StarRating rating={mentor.stars} /> {mentor.stars}
                                                     </span>
-                                                    <span className='py-1 px-4 rounded-full  bg-xmentor text-sm text-white'>1000 reviews </span>
+                                                    <span className='py-1 px-4 rounded-full  bg-xmentor/10 text-sm text-black'>1000 reviews </span>
                                                 </div>
                                                 <div className=' text-xl font-medium'>
                                                     {mentor.profession}

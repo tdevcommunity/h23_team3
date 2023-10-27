@@ -7,11 +7,11 @@ const BlockFooter = () => {
     <div className="w-10/12 mx-auto flex items-center justify-between my-2 pt-8 pb-8 border-b space-x-4 mt-8">
       <div className="flex gap-20">
         <Image
-          src="/assets/logo/xmentor-w.svg"
+          src="/assets/logo/logo-white.png"
           className="my-2"
           alt="xmentor-logo"
-          width={120}
-          height={100}
+          width={80}
+          height={80}
         />
         <ul className="flex gap-10 items-end">
           {linksData.map((link) => (

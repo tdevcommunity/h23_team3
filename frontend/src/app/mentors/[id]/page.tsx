@@ -37,12 +37,12 @@ export default function MentorDetails({ params }: {
                 </div>
                 <div>
                     <LinkButtonSecondary href={""}>
-                        Message
+                        Méssage
                     </LinkButtonSecondary>
                 </div>
             </div>
             <div>
-                <span>ABOUT</span>
+                <span>Á PROPOS</span>
                 <p className="text-sm text-gray-500">
                     {selectedMentor.description}
                 </p>

@@ -1,5 +1,5 @@
 import StarRating from '@/components/ui/starRating';
-import LanguageIcon from '@/components/ui/languageIcon';
+import {LanguageIcon} from '@/components/icon/icons';
 import { Key } from 'react';
 
 const MentorSearchCard = ({ mentor }) => {
@@ -37,12 +37,7 @@ const MentorSearchCard = ({ mentor }) => {
                     {
                         mentor?.stack?.map((skill, index) => (
                             <p key={index} style={{
-                                padding: '5px',
-                                color: 'black',
-                                fontSize: '12px',
-                                border:'solid 1px purple',
-                                marginLeft:'3px',
-                                borderRadius:'2px'
+                              
                             }} >{skill}</p>
                         ))
                     }

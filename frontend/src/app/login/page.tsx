@@ -28,7 +28,7 @@ const FormSchema = z.object({
     }),
 })
 
-export default function Login() {
+ const  login = () => {
     const form = useForm<z.infer<typeof FormSchema>>({
         resolver: zodResolver(FormSchema),
         defaultValues: {
@@ -55,11 +55,11 @@ export default function Login() {
                 <div className="w-full h-full bg-gray-200 flex items-center justify-content-center">
                     <div className="text-center">
                         <Image
-                            src="/assets/logo/xmentor.svg"
-                            className=" mx-auto my-5 "
+                            src="/assets/logo/logo.png"
+                            className=" mx-auto my-5  w-16 "
                             alt="xmentor-logo"
-                            width={120}
-                            height={100}
+                            width={80}
+                            height={80}
                         />
                         <p className="text-sm mx-auto p-4">
                             Une plateforme de mentorat  vous aide à vous améliorer en codage. Vous pouvez utiliser le même compte pour vous connecter à la fois à Codementor et à Arc.
@@ -115,9 +115,9 @@ export default function Login() {
                                     name="email"
                                     render={({ field }) => (
                                         <FormItem className="flex gap-4 flex-col ">
-                                            <FormLabel className="text-md">Email</FormLabel>
+                                            <FormLabel className="text-md ">Email</FormLabel>
                                             <FormControl>
-                                                <Input className="h-12 px-4  " type="email" placeholder="shadcn" {...field} />
+                                                <Input className="h-12 px-4 ring-offset-xmentor/50 focus-visible:ring-xmentor/10 " type="email" placeholder="votre  mail" {...field} />
                                             </FormControl>
                                             <FormMessage />
                                         </FormItem>
@@ -128,7 +128,7 @@ export default function Login() {
                                         <FormItem>
                                             <FormLabel className="text-md">Mot de passe</FormLabel>
                                             <FormControl>
-                                                <Input className="h-12 px-4 ring-offset-xmentor/50 focus-visible:ring-xmentor/10" type="password" placeholder="shadcn" {...field} />
+                                                <Input className="h-12 px-4 ring-offset-xmentor/50 focus-visible:ring-xmentor/10" type="password" placeholder="mot de passe " {...field} />
                                             </FormControl>
                                             <FormMessage />
                                         </FormItem>
@@ -147,4 +147,5 @@ export default function Login() {
     )
 }
 
+export default  login ;
 
