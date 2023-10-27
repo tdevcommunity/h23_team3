@@ -1,4 +1,4 @@
-# Equipe h23_team3- Theme :  Repertoire pour le hacktoberfest Lome de l'equipe 3
+# XMentors 
 ![image](https://github.com/tdevcommunity/h23_team3/assets/63166764/9dfc6d4f-6703-4eda-9052-f63ce0b7a34b)
 ![image](https://github.com/tdevcommunity/h23_team3/assets/63166764/5b5d8edf-8c08-4ac8-8bc0-b3f42c668be2)
 
