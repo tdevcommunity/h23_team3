@@ -76,6 +76,17 @@
     @apply bg-background text-foreground;
    
   }
+  .animated-card {
+    animation:  slide 20s linear infinite ; 
+    width:  max-content;
+ 
+  }
+
+  @keyframes slide  {
+    to {
+      transform : translate(calc(-50% - .5rem)) ;
+    }
+  }
 }
 
 @layer components {
