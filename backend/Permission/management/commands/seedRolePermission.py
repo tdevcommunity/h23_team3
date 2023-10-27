@@ -48,6 +48,41 @@ class Seeder:
                     'name': 'Can create mini blog',
                     'type': Ressources,
                 },
+                {
+                    'codename': 'can_update_session',
+                    'name': 'Can update session',
+                    'type': Ressources,
+                },
+                {
+                    'codename': 'can_update_mini_blog',
+                    'name': 'Can update mini blog',
+                    'type': Ressources,
+                },
+                {
+                    'codename': 'can_delete_session',
+                    'name': 'Can delete session',
+                    'type': Ressources,
+                },
+                {
+                    'codename': 'can_delete_mini_blog',
+                    'name': 'Can delete mini blog',
+                    'type': Ressources,
+                },
+                {
+                    'codename': 'can_view_session',
+                    'name': 'Can delete mini blog',
+                    'type': Ressources,
+                },
+                {
+                    'codename': 'can_view_session_details',
+                    'name': 'Can view session details',
+                    'type': Ressources,
+                },
+                {
+                    'codename': 'can_close_or_open_session',
+                    'name': 'Can close or open session',
+                    'type': Ressources,
+                },
             ]
 
             for permission_data in permission_customizes:

@@ -50,6 +50,7 @@ class Users(AbstractBaseUser):
     phone = models.CharField(max_length=50, unique=True, null=True)
     email = models.EmailField(verbose_name='email address', max_length=255, unique=True)
     username = models.CharField(max_length=255, unique=True)
+    bio = models.TextField(null=True)  
     status = models.BooleanField(default=False)
     password = models.CharField(max_length=255)
     sexe = models.CharField(max_length=255, choices=[(sexe.value, sexe.name) for sexe in GenderEnum], null=True)

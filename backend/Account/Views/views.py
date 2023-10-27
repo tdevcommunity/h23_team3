@@ -43,6 +43,7 @@ def register(request):
         'first_name': request.data.get('first_name'),
         'phone': request.data.get('phone'),
         'profession': request.data.get('profession'),
+        'bio': request.data.get('bio'),
         'status': statusAccount,
     }
 

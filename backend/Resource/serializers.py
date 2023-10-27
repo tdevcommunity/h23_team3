@@ -2,7 +2,7 @@ from rest_framework import serializers
 from Account.models import Users, UserStacks, Members, Pays, Professions, Stacks
 from django.contrib.auth.models import Permission
 from Resource.models import Ressources, Discussions, Type
-from Account.serializers import StacksSerializer
+from Account.serializers import StacksSerializer, UsersSerializer
 
 class TypeSerializer(serializers.ModelSerializer):
     class Meta:
