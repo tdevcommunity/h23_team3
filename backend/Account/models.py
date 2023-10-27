@@ -1,3 +1,4 @@
+from django.core.mail import send_mail
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser
 from django.utils import timezone
@@ -64,6 +65,16 @@ class Users(AbstractBaseUser):
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username']
 
+    class Meta:
+        verbose_name = 'Utilisateur'
+
+    def is_mentor(self):
+        # Vérifie si l'utilisateur est un mentor (au moins une demande en tant que mentor)
+        return self.mentor.exists()
+
+    def is_mentore(self):
+        return self.mentore.exists()
+
     objects = UserManager()
 
     @property
@@ -92,9 +103,13 @@ class UserStacks(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+
 class Members(models.Model):
     mentor = models.ForeignKey('Account.Users', related_name='mentor', on_delete=models.CASCADE)
     mentore = models.ForeignKey('Account.Users', related_name='mentore', on_delete=models.CASCADE)
     status = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = 'Membre'
