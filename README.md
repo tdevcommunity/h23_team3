@@ -19,6 +19,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ![image](https://github.com/tdevcommunity/h23_team3/assets/63166764/9dfc6d4f-6703-4eda-9052-f63ce0b7a34b)
 ![image](https://github.com/tdevcommunity/h23_team3/assets/63166764/5b5d8edf-8c08-4ac8-8bc0-b3f42c668be2)
+![image](https://github.com/tdevcommunity/h23_team3/assets/63166764/57a55d10-aded-4cac-91e5-f1768ea2df9f)
 ![image](https://github.com/tdevcommunity/h23_team3/assets/63166764/2edf0262-ae15-448a-a230-409d17f01694)
 
 # PostMan Api endpoints 
