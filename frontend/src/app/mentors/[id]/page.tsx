@@ -28,12 +28,12 @@ export default function MentorDetails() {
                 </div>
                 <div>
                     <LinkButtonSecondary href={""}>
-                        Message
+                        Méssage
                     </LinkButtonSecondary>
                 </div>
             </div>
             <div>
-                <span>ABOUT</span>
+                <span>Á PROPOS</span>
                 <p className="text-sm text-gray-500">
                     Experienced (15+ years) developer and friendly Ruby on Rails and React/Next.js/Redux Developer/Mentor (with passion for helping others learn) | ★ 3,520+ 5 ★ sessions/jobs. 7+ years on top of the Codementor Ranking ★
                 </p>
