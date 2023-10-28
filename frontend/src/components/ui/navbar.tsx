@@ -6,7 +6,7 @@ import { Key, useEffect, useRef, useState } from 'react';
 import { Url } from 'url';
 import { Button } from './button';
 import {LinkButton, LinkButtonCircle} from './linkButton';
-
+import { useSession, signIn, signOut } from "next-auth/react"
 const Navbar = () => {
   const [scrolling , setScrolling] = useState(false);
   const links: {
@@ -40,7 +40,7 @@ useEffect(() => {
           </ul>
         </div>
         <div className="flex space-x-4 items-center">
-
+  
         <LinkButtonCircle href={"/login"} target=''>
         Se connecter
         </LinkButtonCircle>

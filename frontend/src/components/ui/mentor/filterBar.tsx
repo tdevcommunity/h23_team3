@@ -4,7 +4,7 @@ import mentorsData from '@/data/mentors.json';
 import Image from 'next/image';
 
 import { filterByLanguage, filterBySessionsRange, filterBySessions, filterBySessionsHour, filterBySessionsHourRange } from './functions/filterMentors'
-import { Input } from '../input';
+import Link  from 'next/link';
 
 import { useState } from 'react';
 import StarRating from '../starRating';
@@ -159,6 +159,7 @@ const FilterBar = () => {
                             ) : (
                                 <div>
                                     {mentors?.map((mentor, index) => (
+                                   <Link key={index} passHref href={"/mentors/1"}>
                                         <div key="index" className='flex group bg-white hover:bg-blue-50 rounded-md duration-300 hover:cursor-pointer hover:border-xmentor hover:hover-2  border mb-6 px-5  py-6  '>
                                             <div className='w-5/6 '>
                                                 <div className='flex gap-4   items-end pb-5  '>
@@ -213,6 +214,7 @@ const FilterBar = () => {
                                             </div>
 
                                         </div>
+                                   </Link>
                                     ))}
                                 </div>
                             )
