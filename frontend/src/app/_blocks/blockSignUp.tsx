@@ -3,7 +3,7 @@ import { LinkButton ,LinkButtonOutline } from "@/components/ui/linkButton";
 
 
 const BlockSignUp = () => {
-    return <section className="w-10/12 mx-auto h-screen flex items-center">
+    return <section className="w-10/12 mx-auto py-36 flex items-center">
         <div className=" grid grid-cols-2   place-items-center  w-full">
             <SignUpCard>
                 <span className="bg-green-300 text-sm  text-black py-2 px-3 mb-2 rounded-full inline-block ">
