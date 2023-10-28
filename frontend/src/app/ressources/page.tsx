@@ -150,7 +150,7 @@ export default function Ressources() {
 
                 </div>
                 <div className="p-3  w-full col-span-2 ">
-                    <div className=" font-medium text-lg mb-4 ">Discover more of what matters to you</div>
+                    <div className=" font-medium text-lg mb-4 ">Découvrez davantage ce qui compte pour vous</div>
                     <div className="flex flex-wrap gap-4 ">
                         <LinkButtonOutline className="hover:bg-xmentor border-none bg-xmentor/10 text-black hover:text-white  h-10 px-3 font-light  text-sm " href={"#"}>
                             Flutter
