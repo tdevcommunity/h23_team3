@@ -75,7 +75,7 @@ const FormSchema = z.object({
                                     Se connecter a xmentor
                                 </div>
                                 <div className="flex gap-5 flex-col ">
-                                    <LinkButtonOutline href={""} className="w-full  ">
+                                    <LinkButtonOutline href={"signIn"} className="w-full  ">
                                         <div className="flex items-center gap-5  ">
                                             <Image
                                                 src="/assets/icons/github.svg"
